@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        @for (item of columns; track $index) {
+            {{item}}
+        }
+    </tr>
+    @for (row of data; track $index) {
+        <tr>
+            
+            @for (Col of columns; track $index) {
+                <td>{{row[Col]}}</td>
+            }
+        </tr>
+    }
+</table>
